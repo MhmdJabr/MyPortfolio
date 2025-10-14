@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mohammad Jabr — Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- Font Awesome (icons) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-[#f8fafc] dark:bg-[#0b1220] text-[#0f1724] dark:text-[#e6eef8] transition-colors duration-300"
+  >
+    <!-- NAVBAR -->
+    <header class="fixed w-full top-0 z-40">
+      <div
+        class="backdrop-blur-sm bg-white/60 dark:bg-[#071023]/60 border-b dark:border-[#112032]"
+      >
+        <div
+          class="container mx-auto px-4 py-3 flex items-center justify-between"
+        >
+          <a href="#" class="font-bold text-lg">Mohammad Jabr</a>
+          <nav class="hidden md:flex gap-6 items-center text-sm">
+            <a href="#home" class="hover:text-[#14b8a6]">Home</a>
+            <a href="#about" class="hover:text-[#14b8a6]">About</a>
+            <a href="#skills" class="hover:text-[#14b8a6]">Skills</a>
+            <a href="#projects" class="hover:text-[#14b8a6]">Projects</a>
+            <a href="#experience" class="hover:text-[#14b8a6]">Experience</a>
+            <a href="#education" class="hover:text-[#14b8a6]">Education</a>
+            <!--<a href="#certificates" class="hover:text-[#14b8a6]">Certificates</a> -->
+            <a href="#contact" class="hover:text-[#14b8a6]">Contact</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <button
+              id="theme-toggle"
+              aria-label="Toggle theme"
+              class="p-2 rounded-md hover:scale-105 transition-transform text-lg"
+            >
+              🌙
+            </button>
+            <!-- mobile menu toggle (simple) -->
+            <button id="mobile-toggle" class="md:hidden p-2 text-xl">☰</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container mx-auto px-4 pt-28 pb-20 space-y-28">
+      <!-- HOME -->
+      <section id="home" class="text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4">
+          Hello, I'm <span class="text-gradient-primary">Mohammad Jabr</span>
+        </h1>
+        <div
+          class="mx-auto w-28 h-1 rounded mb-6 bg-gradient-to-r from-[#14b8a6] to-[#4f46e5]"
+        ></div>
+        <p
+          class="max-w-3xl mx-auto text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+        >
+          I’m a passionate .NET developer turning ideas into high-performance
+          web applications. I specialize in
+          <strong
+            >scalable solutions, clean code & innovative problem-solving</strong
+          >. I thrive in collaborative teams and can drive projects
+          independently.
+        </p>
+
+        <div class="mt-8 flex justify-center gap-4 flex-wrap">
+          <a
+            href="https://drive.google.com/file/d/1sb-QxUpzLHs-RF8ioLUWikNk9aXGEkgH/view?usp=drive_link"
+            class="btn-primary"
+            >View My CV</a
+          >
+          <a href="#contact" class="btn-primary-outline">Contact Me</a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="relative" data-aos="fade-up">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+          <!-- image col -->
+          <div class="md:col-span-4 flex justify-center" data-aos="fade-right">
+            <div class="profile-wrap">
+              <img src="images/profile.png" alt="Profile" class="profile-img" />
+              <div class="profile-ring"></div>
+            </div>
+          </div>
+
+          <!-- content col -->
+          <div class="md:col-span-8" data-aos="fade-left">
+            <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+            <h3
+              class="text-xl font-semibold text-slate-700 dark:text-slate-200 mb-4"
+            >
+              Who I Am
+            </h3>
+            <div
+              class="prose max-w-none text-slate-600 dark:text-slate-300 mb-6"
+            >
+              <p>
+                I’m a passionate .NET developer who loves building reliable,
+                high-performing applications that solve real-world problems. I
+                focus on combining strong functionality with clean design,
+                believing that small details make a big difference. Whether
+                working independently or within a team, I’m always driven to
+                deliver the best results in the smartest and simplest way
+                possible.
+              </p>
+              <br />
+              <p>
+                Driven by curiosity and a passion for excellence, I thrive on
+                collaborating with teams or tackling challenges independently. I
+                focus on creating efficient, high-impact solutions, continuously
+                learning, and pushing the boundaries of what applications can
+                achieve.
+              </p>
+            </div>
+
+            <!-- contact badges (as sleek chips) -->
+            <div class="flex flex-wrap gap-3 mt-4">
+              <a class="chip" title="Location"
+                ><i class="fa-solid fa-location-dot mr-2"></i> Amman, Jordan</a
+              >
+              <a
+                class="chip"
+                href="mailto:mohammad29798@gmail.com"
+                title="Email"
+                ><i class="fa-solid fa-envelope mr-2"></i>
+                mohammad29798@gmail.com</a
+              >
+              <a class="chip" href="tel:00962796326231" title="Phone"
+                ><i class="fa-solid fa-phone mr-2"></i> 00962796326231</a
+              >
+              <a
+                class="chip"
+                href="https://www.linkedin.com/in/mhmdjaber/"
+                target="_blank"
+                title="LinkedIn"
+                ><i class="fa-brands fa-linkedin mr-2"></i> LinkedIn</a
+              >
+              <a
+                class="chip"
+                href="https://github.com/MhmdJabr"
+                target="_blank"
+                title="GitHub"
+                ><i class="fa-brands fa-github mr-2"></i> GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS (grouped cards) -->
+      <section id="skills" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center mb-8">Skills</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-teal-100 text-[#0f1724]"
+                ><i class="fa-solid fa-server"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Backend</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              C#, .NET Core, ASP.NET MVC, ASP.NET Web API, .NET Framework
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-indigo-100 text-[#0f1724]"
+                ><i class="fa-solid fa-database"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Databases & ORM</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              SQL Server, LINQ, Entity Framework, EF Core, ADO.NET
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-purple-100 text-[#0f1724]"
+                ><i class="fa-solid fa-brain"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Core Concepts</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              Problem Solving, Data Structures, Algorithms, SOLID, Design
+              Patterns
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-blue-100 text-[#0f1724]"
+                ><i class="fa-solid fa-building"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Enterprise Platforms</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              SharePoint Server (2019), Project Server 2019, Power BI
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-teal-100 text-[#0f1724]"
+                ><i class="fa-solid fa-gear"></i
+              ></span>
+              <h4 class="font-semibold text-lg">DevOps & Deployment</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">Azure, Git, GitHub</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-indigo-100 text-[#0f1724]"
+                ><i class="fa-solid fa-code"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Frontend</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              HTML, CSS, Ajax, JavaScript, Bootstrap, React.js
+            </p>
+          </article>
+
+          <article class="skill-card">
+            <div class="flex items-center gap-3 mb-3">
+              <span class="icon-circle bg-gray-100 text-[#0f1724]"
+                ><i class="fa-solid fa-tools"></i
+              ></span>
+              <h4 class="font-semibold text-lg">Tools</h4>
+            </div>
+            <p class="text-slate-600 dark:text-slate-300">
+              Postman, Visual Studio, VS Code
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROJECTS (swiper slider) -->
+      <section id="projects" data-aos="fade-up" class="relative">
+        <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+
+        <div class="swiper projects-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="card-large mx-auto max-w-3xl">
+                <div class="flex flex-col md:flex-row gap-6">
+                  <div class="md:w-1/3">
+                    <img
+                      src="images/EPM.png"
+                      alt="project1"
+                      class="rounded-lg object-cover h-48"
+                    />
+                  </div>
+                  <div class="md:flex-1">
+                    <h3 class="text-xl font-bold mb-2">EPM (Stingray)</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-3">
+                      EPM (Enterprise Project Management System): Built
+                      scheduling, risk tracking, and lessons learned modules
+                      using .NET Core, SQL Server, and EF Core. Improved project
+                      visibility for 500+ users.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="card-large mx-auto max-w-3xl">
+                <div class="flex flex-col md:flex-row gap-6">
+                  <div class="md:w-1/3">
+                    <img
+                      src="images/expense-tracker.png"
+                      alt="project1"
+                      class="rounded-lg object-cover h-48"
+                    />
+                  </div>
+                  <div class="md:flex-1">
+                    <h3 class="text-xl font-bold mb-2">Expense Tracker</h3>
+                    <p class="text-slate-600 dark:text-slate-300 mb-3">
+                      A simple React.js app that allows users to log in and view
+                      a dashboard with detailed expense data. It uses APIs to
+                      fetch and manage financial records efficiently.
+                    </p>
+                    <div class="flex gap-3 items-center">
+                      <a
+                        class="btn-sm"
+                        href="https://github.com/MhmdJabr/expense-tracker"
+                        >View Code</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- add more slides as needed -->
+          </div>
+
+          <!-- navigation -->
+          <div
+            class="swiper-button-prev text-[#0b1220] dark:text-[#e6eef8]"
+          ></div>
+          <div
+            class="swiper-button-next text-[#0b1220] dark:text-[#e6eef8]"
+          ></div>
+          <div class="swiper-pagination mt-6"></div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE (swiper) -->
+      <section id="experience" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center mb-8">Work Experience</h2>
+
+        <div class="flex flex-col space-y-8 max-w-3xl mx-auto">
+          <!-- Experience Item 1 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-l-4 border-blue-500 relative"
+          >
+            <div
+              class="absolute -left-3 top-6 w-6 h-6 bg-blue-500 rounded-full border-2 border-white dark:border-gray-800"
+            ></div>
+            <h3 class="font-bold text-xl mb-1">Software Engineer - Stingray</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-300 mb-3">
+              Oct 2020 – Sept 2022
+            </p>
+            <p class="text-slate-600 dark:text-slate-300">
+              Worked as a .NET Developer, developing and maintaining scalable
+              web applications and backend services using ASP.NET, C#, and SQL
+              Server.
+            </p>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border-l-4 border-blue-500 relative"
+          >
+            <div
+              class="absolute -left-3 top-6 w-6 h-6 bg-blue-500 rounded-full border-2 border-white dark:border-gray-800"
+            ></div>
+            <h3 class="font-bold text-xl mb-1">SQL Intern - Devoyard</h3>
+            <p class="text-sm text-slate-500 dark:text-slate-300 mb-3">
+              Feb 2020 – May 2020
+            </p>
+            <p class="text-slate-600 dark:text-slate-300">
+              As an SQL Trainee, I developed foundational skills in database
+              management, focusing on SQL queries, data manipulation, and
+              database design principles.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES (swiper small cards) 
+      <section id="certificates" data-aos="fade-up">
+        <h2 class="text-3xl font-semibold text-center mb-8">Certificates</h2>
+        <div class="swiper cert-swiper">
+          <div class="swiper-slide">
+            <div class="swiper-slide">
+              <div class="card-small text-center mx-auto max-w-3xl">
+                <h4 class="font-semibold">ASP.NET MVC Web Application</h4>
+                <p class="text-sm text-slate-500 dark:text-slate-300">PSUT</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-small text-center mx-auto max-w-3xl">
+                <h4 class="font-semibold">Soft Skills</h4>
+                <p class="text-sm text-slate-500 dark:text-slate-300">PSUT</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="swiper-button-prev text-[#0b1220] dark:text-[#e6eef8]"
+          ></div>
+          <div
+            class="swiper-button-next text-[#0b1220] dark:text-[#e6eef8]"
+          ></div>
+        </div>
+      </section> -->
+
+      <!-- EDUCATION -->
+      <section id="education" data-aos="fade-up" class="py-10 px-4">
+        <h2
+          class="text-4xl font-bold text-center mb-10 text-slate-800 dark:text-white"
+        >
+          🎓 Education
+        </h2>
+        <div
+          class="bg-white dark:bg-slate-800 shadow-lg rounded-xl p-6 mx-auto max-w-md text-center"
+        >
+          <h3 class="text-xl font-semibold text-slate-700 dark:text-white mb-2">
+            B.Sc. Computer Science
+          </h3>
+          <p class="text-sm text-slate-500 dark:text-slate-300">
+            Al-Balqa Applied University
+          </p>
+          <p class="text-sm text-slate-500 dark:text-slate-300">2016 – 2020</p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" data-aos="fade-up" class="py-10">
+        <h2 class="text-3xl font-semibold text-center mb-8">Contact</h2>
+        <div class="card-large mx-auto max-w-3xl">
+          <div class="text-center">
+            <h4 class="font-bold mb-2">Get in touch</h4>
+            <p class="text-slate-600 dark:text-slate-300 mb-4">
+              Email:
+              <a href="mailto:mohammad29798@gmail.com" class="text-[#14b8a6]"
+                >mohammad29798@gmail.com</a
+              >
+            </p>
+            <p class="text-slate-600 dark:text-slate-300">
+              Phone: 00962796326231
+            </p>
+            <br />
+            <h4 class="font-bold mb-2">Social</h4>
+            <div class="flex justify-center gap-3 mt-2">
+              <a
+                href="https://www.linkedin.com/in/mhmdjaber/"
+                class="social-pill"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/MhmdJabr" class="social-pill"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-6 mt-12 border-t dark:border-[#0f1724]">
+      <p class="text-sm">© 2025 Mohammad Jabr — All rights reserved.</p>
+    </footer>
+
+    <!-- SCRIPTS: Swiper, AOS, Custom -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+      AOS.init({ duration: 700, once: true, easing: "ease-out-cubic" });
+    </script>
+  </body>
+</html>

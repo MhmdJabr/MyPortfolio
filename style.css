@@ -1,0 +1,249 @@
+/* ---------- basics ---------- */
+:root {
+  --luxury-cyan: #14b8a6;
+  --luxury-indigo: #4f46e5;
+  --luxury-violet: #8b5cf6;
+  --bg-light: #f8fafc;
+  --bg-dark: #0b1220;
+  --card-light: #ffffff;
+  --card-dark: #0f1724;
+}
+
+/* body handled by tailwind classes; add custom utilities here */
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 120px;
+}
+
+/* gradient text */
+.text-gradient-primary {
+  background: linear-gradient(90deg, var(--luxury-cyan), var(--luxury-indigo));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background: linear-gradient(90deg, var(--luxury-cyan), var(--luxury-indigo));
+  color: white;
+  padding: 0.7rem 1.25rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  box-shadow: 0 8px 30px rgba(79, 70, 229, 0.12);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(79, 70, 229, 0.16);
+}
+
+/* outline button */
+.btn-primary-outline {
+  border: 1px solid rgba(20, 184, 166, 0.12);
+  color: var(--luxury-cyan);
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.6rem;
+  background: transparent;
+  transition: transform 0.22s, background 0.22s;
+}
+.btn-primary-outline:hover {
+  background: rgba(20, 184, 166, 0.06);
+  transform: translateY(-3px);
+}
+
+/* profile block */
+.profile-wrap {
+  position: relative;
+  width: 18rem;
+  height: 18rem;
+}
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  display: block;
+  border: 6px solid rgba(255, 255, 255, 0.02);
+  position: relative;
+  z-index: 10;
+}
+.profile-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  z-index: 5;
+  box-shadow: 0 0 0 6px rgba(20, 184, 166, 0.1),
+    0 0 0 12px rgba(79, 70, 229, 0.06);
+  transition: transform 0.28s ease;
+}
+.profile-wrap:hover .profile-ring {
+  transform: scale(1.03);
+}
+
+/* chips (contact badges) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.8)
+  );
+  border-radius: 9999px;
+  color: #0b1220;
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: 0 6px 18px rgba(11, 18, 32, 0.06);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.dark .chip {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 24, 39, 0.6),
+    rgba(8, 18, 30, 0.6)
+  );
+  color: #e6eef8;
+}
+.chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(11, 18, 32, 0.12);
+}
+
+/* info & skill cards */
+.info-card,
+.card-large,
+.card-small,
+.skill-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.9)
+  );
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(11, 18, 32, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.dark .info-card,
+.dark .card-large,
+.dark .card-small,
+.dark .skill-card {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 12, 20, 0.45),
+    rgba(6, 10, 16, 0.45)
+  );
+  color: #e6eef8;
+  box-shadow: 0 8px 30px rgba(3, 8, 20, 0.6);
+}
+.info-card:hover,
+.card-large:hover,
+.card-small:hover,
+.skill-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 48px rgba(11, 18, 32, 0.12);
+}
+
+/* skill icon circle */
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  font-size: 18px;
+}
+
+/* card-large (project/experience) */
+.card-large {
+  display: block;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+/* card-small (cert) */
+.card-small {
+  width: 700px !important; /* حجم العرض */
+  height: 150px !important; /* حجم الطول */
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+#education h2 {
+  position: relative;
+}
+
+#education h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* small buttons */
+.btn-sm {
+  background: linear-gradient(90deg, var(--luxury-cyan), var(--luxury-indigo));
+  color: white;
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+}
+.btn-sm-outline {
+  border: 1px solid rgba(79, 70, 229, 0.12);
+  padding: 0.45rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+/* social pills */
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background: rgba(20, 184, 166, 0.08);
+  color: var(--luxury-cyan);
+  transition: transform 0.16s;
+}
+.social-pill:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(20, 184, 166, 0.08);
+}
+
+/* swiper custom */
+.swiper {
+  padding: 10px 0;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--luxury-indigo);
+}
+.swiper-pagination-bullet-active {
+  background: var(--luxury-cyan);
+}
+
+/* responsive tweaks */
+@media (max-width: 768px) {
+  .profile-wrap {
+    width: 12rem;
+    height: 12rem;
+  }
+  .profile-img {
+    border-width: 5px;
+  }
+  section {
+    scroll-margin-top: 90px;
+  }
+}
